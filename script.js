@@ -109,7 +109,7 @@ const generateLink = (mode) => {
             return;
         }
         const url = buildUrl(base64, mode);
-        statsEl.innerHTML = `Data length: ${data.length} |  Link length: ${url.length} | Compression ratio: ${Math.round(
+        statsEl.innerHTML = `Данни Дължина: ${data.length} |  Линк / Връзка Дължина: ${url.length} | Степен на компресия: ${Math.round(
             (100 * url.length) / data.length
         )}%`;
 
