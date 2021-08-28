@@ -30,7 +30,7 @@ const initCodeEditor = () => {
 
     statsEl = byId('stats');
     editor.on('change', () => {
-        statsEl.innerHTML = `Length: ${editor.getValue().length} |  Lines: ${editor['doc'].size}`;
+        statsEl.innerHTML = `Символи: ${editor.getValue().length} |  Линии: ${editor['doc'].size}`;
         hideCopyBar();
     });
 };
@@ -48,7 +48,7 @@ const initLangSelector = () => {
             const language = e.data || { mime: null, mode: null };
             editor.setOption('mode', language.mime);
             CodeMirror.autoLoadMode(editor, language.mode);
-            document.title = e.text && e.text !== 'Plain Text' ? `NoPaste - ${e.text} code snippet` : 'NoPaste';
+            document.title = e.text && e.text !== 'Plain Text' ? `BG PasteBin - ${e.text} code snippet` : 'BGPaste';
         },
     });
 
@@ -80,11 +80,11 @@ const handleLegacyUrl = () => {
         const newLang = CodeMirror.modeInfo.find((e) => hash(e.name) === hashedLang);
         const queryParams = newLang ? '?l=' + shorten(newLang.name) : '';
         location.replace(`${base}/${queryParams}#${location.hash.substr(6)}`);
-        throw new Error('waiting for page to reload');
+        throw new Error('изчаква се сайта да презареди');
     }
     if (lang) {
         location.replace(`${base}/${'?l=' + shorten(lang)}${location.hash}`);
-        throw new Error('waiting for page to reload');
+        throw new Error('изчаква се сайта да презареди');
     }
 };
 
@@ -134,7 +134,7 @@ const hideCopyBar = (success) => {
         copyBar.classList.add('hidden');
         return;
     }
-    copyButton.innerText = 'Copied !';
+    copyButton.innerText = 'Копирано !';
     setTimeout(() => {
         copyBar.classList.add('hidden');
         copyButton.innerText = 'Copy';
