@@ -45,9 +45,9 @@ npm/microtip@0.2.2/microtip.min.css
                 </div>
                 <div class="col-auto my-1">
                     <button class="clipboard py-1 px-2 mx-1" id="copy-btn" data-clipboard-target="#copy-link" type="button">
-                        Copy
+                        Копирай
                     </button>
-                    <button class="py-1 px-2 mx-1" onclick="hideCopyBar(false)" type="button">Cancel</button>
+                    <button class="py-1 px-2 mx-1" onclick="hideCopyBar(false)" type="button">Откажи</button>
                 </div>
             </div>
         </div>
@@ -66,7 +66,7 @@ npm/microtip@0.2.2/microtip.min.css
                         data-micromodal-trigger="description-modal"
                         >About</a
                     >
-                    <a href="https://github.com/bokub/nopaste" rel="noopener" target="_blank" class="mx-3">Source</a>
+                    <a href="https://discord.gg/fRZH6sEWbc" rel="noopener" target="_blank" class="mx-3">Discord</a>
                 </div>
                 <div class="col"></div>
                 <div class="col-auto my-1">
@@ -97,10 +97,10 @@ npm/microtip@0.2.2/microtip.min.css
                 </div>
                 <div class="col-auto">
                     <button class="py-1 px-2 mx-0 my-1" onclick="generateLink('url')" type="button">
-                        Generate link
+                        Създай Линк
                     </button>
                     <button class="py-1 px-2 mx-1 my-1" onclick="generateLink('markdown')" type="button">
-                        Generate markdown
+                        Създай markdown
                     </button>
                     <button class="py-1 px-2 mx-0 my-1" onclick="generateLink('iframe')" type="button">Embed</button>
                 </div>
@@ -110,7 +110,7 @@ npm/microtip@0.2.2/microtip.min.css
         <div id="editor"></div>
         <footer id="footer" class="shadow-top container-fluid">
             <div class="row my-1">
-                <div class="col mono hide-readonly" id="stats">Length: 0 | Lines: 1</div>
+                <div class="col mono hide-readonly" id="stats">Символи: 0 | Линии: 1</div>
                 <div class="col mono show-readonly">BG PasteBin - Всички Права Запазени | 2021 г.</div>
                 <div class="col-auto mono show-readonly">
                     <a href="javascript:void(0)" onclick="openInNewTab()">
@@ -125,8 +125,8 @@ npm/microtip@0.2.2/microtip.min.css
                 <div role="dialog" class="modal-content shadow-bottom p-3 m-3" data-micromodal-close>
                     <h2 class="mt-0">Какво точно е BG PasteBin??</h2>
 
-                    <span class="pink">BG PasteBin</span> is an open-source website similar to Pastebin where you can store any piece of code,
-                    and generate links for easy sharing<br /><br />
+                    <span class="pink">BG PasteBin</span> е безплатен сайт за създаване и споделяне на текстове / кодове чрез линк,
+                    лесно бързо и частно / тайно.<br /><br />
 
                     However, what makes NoPaste special is that it works with <span class="pink">no database</span>, and
                     <span class="pink">no back-end code</span>.<br />
