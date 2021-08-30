@@ -48,7 +48,7 @@ const initLangSelector = () => {
             const language = e.data || { mime: null, mode: null };
             editor.setOption('mode', language.mime);
             CodeMirror.autoLoadMode(editor, language.mode);
-            document.title = e.text && e.text !== 'Plain Text' ? `BG PasteBin - ${e.text} code snippet` : 'BG PasteBin';
+            document.title = e.text && e.text !== 'Само Текст' ? `BG PasteBin - ${e.text} code snippet` : 'BG PasteBin';
         },
     });
 
@@ -160,7 +160,7 @@ const openInNewTab = () => {
 // Build a shareable URL
 const buildUrl = (rawData, mode) => {
     const base = `${location.protocol}//${location.host}${location.pathname}`;
-    const query = shorten('Само Текст') === select.selected() ? '' : `?l=${encodeURIComponent(select.selected())}`;
+    const query = shorten('Plain Text') === select.selected() ? '' : `?l=${encodeURIComponent(select.selected())}`;
     const url = base + query + '#' + rawData;
     if (mode === 'markdown') {
         return `[NoPaste snippet](${url})`;
