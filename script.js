@@ -48,7 +48,7 @@ const initLangSelector = () => {
             const language = e.data || { mime: null, mode: null };
             editor.setOption('mode', language.mime);
             CodeMirror.autoLoadMode(editor, language.mode);
-            document.title = e.text && e.text !== 'Plain Text' ? `BG PasteBin - ${e.text} code snippet` : 'BGPaste';
+            document.title = e.text && e.text !== 'Само Текст' ? `BG PasteBin - ${e.text} code snippet` : 'BGPaste';
         },
     });
 
