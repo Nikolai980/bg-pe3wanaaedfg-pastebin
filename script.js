@@ -48,13 +48,13 @@ const initLangSelector = () => {
             const language = e.data || { mime: null, mode: null };
             editor.setOption('mode', language.mime);
             CodeMirror.autoLoadMode(editor, language.mode);
-            document.title = e.text && e.text !== 'Само Текст' ? `BG PasteBin - ${e.text} code snippet` : 'BGPaste';
+            document.title = e.text && e.text !== 'Plain Text' ? `BG PasteBin - ${e.text} code snippet` : 'BGPaste';
         },
     });
 
     // Set lang selector
     const l = new URLSearchParams(window.location.search).get('l');
-    select.set(l ? decodeURIComponent(l) : shorten('Plain Text'));
+    select.set(l ? decodeURIComponent(l) : shorten('Само Текст'));
 };
 
 const initCode = () => {
